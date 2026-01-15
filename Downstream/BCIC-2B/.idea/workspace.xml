@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="206cbf5e-87f8-4b87-acb4-1dd29d7d6298" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="36PeXi2jPot3lrabwAfGazu3hso" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.EEGTransformer_BCIC2B.executor": "Run",
+    "Python.Result.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "last_opened_file_path": "F:/EEGTransformer/Downstream/BCIC-2B"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Project\EEGTransformer\Downstream\BCIC-2B\Modules\models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\EEGTransformer\Downstream\BCIC-2B\Result\EEGPT" />
+      <recent name="F:\EEGTransformer\Downstream\BCIC-2B\Result\MoEEG\Base" />
+      <recent name="F:\EEGTransformer\Downstream\BCIC-2B\Result\MoEEG\Large" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-7bb8055f9097-cbfc7b97e6b2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-252.28238.29" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="206cbf5e-87f8-4b87-acb4-1dd29d7d6298" name="Changes" comment="" />
+      <created>1764912675293</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764912675293</updated>
+    </task>
+    <servers />
+  </component>
+</project>

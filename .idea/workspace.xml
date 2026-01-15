@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="61bed9d2-0804-4b7d-a926-21696f9f8170" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="38IaTMOnpky8JMzKjTELOcZwUWL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.MoEEG_BCIC2A.executor": "Run",
+    "Python.MoEEG_BCIC2B.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "last_opened_file_path": "F:/Thesis/MoEEG_Code/Downstream/BCIC-2B/Modules/EEGPT"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Thesis\MoEEG_Code\Downstream\BCIC-2B\Modules\EEGPT" />
+      <recent name="F:\Thesis\MoEEG_Code\Downstream\BCIC-2A\Modules\EEGPT" />
+      <recent name="F:\Thesis\MoEEG_Code\Downstream\PhysioP300\Modules\EEGPT" />
+      <recent name="F:\Thesis\MoEEG_Code\Datasets\pretrain" />
+      <recent name="F:\Thesis\MoEEG_Code\Downstream\PhysioP300" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Thesis\MoEEG_Code\Downstream\KaggleERN\Modules\EEGPT" />
+      <recent name="F:\Thesis\MoEEG_Code\Downstream\BCIC-2B" />
+      <recent name="F:\Thesis\MoEEG_Code\Downstream" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-7bb8055f9097-cbfc7b97e6b2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-252.28238.29" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61bed9d2-0804-4b7d-a926-21696f9f8170" name="Changes" comment="" />
+      <created>1768489545490</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1768489545490</updated>
+    </task>
+    <servers />
+  </component>
+</project>
