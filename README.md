@@ -8,7 +8,8 @@ This repository is the official implementation of **MoEEG: A Sparse Mixture-of-E
 
 ![image](Figure/MoEEG.jpg)
 
-MoEEG has two variants,  Base and Large, which share an identical model architecture but differ in hyperparameter configurations: the Base model features an embedding dimension of 128 with 4 attention heads, while the Large model features an embedding dimension of 512 with 8 attention heads. Specifically, MoEEG-Large scales to 40M parameters  to capture high-dimensional neural dynamics. For pre-training, we adopted 16-bit mixed precision on an RTX 4060 (8G) GPU, with optimization implemented via the AdamW optimizer and OneCycleLR scheduler (learning rate = 6 × 10⁻⁵) to ensure stable convergence. To evaluate the generalizability of learned features, linear probing was employed under a Leave-One-Subject-Out (LOSO) cross-validation scheme on downstream tasks.
+MoEEG has two variants,  Base and Large, which share an identical model architecture but differ in hyperparameter configurations: the Base model features an embedding dimension of 128 with 4 attention heads, while the Large model features an embedding dimension of 512 with 8 attention heads. Specifically, MoEEG-Large scales to 40M parameters  to capture high-dimensional neural dynamics. 
+For pre-training, we adopted 16-bit mixed precision on an RTX 4060 (8G) GPU, with optimization implemented via the AdamW optimizer and OneCycleLR scheduler (learning rate = 6 × 10⁻⁵) to ensure stable convergence. To evaluate the generalizability of learned features, linear probing was employed under a Leave-One-Subject-Out (LOSO) cross-validation scheme on downstream tasks.
 
 ## Requirements
 
