@@ -1,8 +1,3 @@
-**2026/2/4 Update**
-
-Our paper has been submitted to the CogSci Conference and will be released upon acceptance.
-
----------------------------------------------------------------------------------------------
 **MoEEG: A Sparse Mixture-of-Experts Transformer for Universal EEG**
 
 **Representation Learning**
