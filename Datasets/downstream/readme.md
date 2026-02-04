@@ -8,6 +8,7 @@ datasets/downstream/Raw_data/BCICIV_2a_gdf/A01E.gdf
 datasets/downstream/Raw_data/BCICIV_2a_gdf/A09T.gdf
 
 Only A0xT.gdf data
+Please first resample the data to 256 Hz.
 Then run the following command to preprocess the data:
 python process_bcic2a.py
 
@@ -18,7 +19,8 @@ datasets/downstream/Raw_data/BCICIV_2b_gdf/B0101T.gdf
 ...
 datasets/downstream/Raw_data/BCICIV_2b_gdf/B0903T.gdf
 
-Only B0x0xT.gdf data 
+Only B0x0xT.gdf data
+Please first resample the data to 256 Hz.
 Then run the following command to preprocess the data:
 python process_bcic2b.py
 
