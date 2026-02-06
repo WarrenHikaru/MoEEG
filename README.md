@@ -46,7 +46,7 @@ Other pretrained models:
 - [LaBraM](https://github.com/935963004/LaBraM) should be placed into `Downstream/Task/Modules/LaBraM/labram-base.pth`.
 - [EEGPT](https://github.com/BINE022/EEGPT.git) should be placed into `Downstream/Task/Modules/EEGPT/eegpt_mcae_58chs_4s_large4E.ckpt`.
 
-<img src="Figure/Pre-training.jpg" alt="image" style="zoom:50%;" />
+<img src="Figure/Pre-training.png" alt="image" style="zoom:50%;" />
 
 ## Pre-training
 
