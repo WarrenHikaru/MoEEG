@@ -7,14 +7,15 @@ from .utils import apply_rotary_emb
 
 class GroupAttention(nn.Module):
     """
-    对 B*N维度做跨序列同位置注意力计算
+    GroupAttention
     """
-    def __init__(self, dim, num_heads=4, qkv_bias=False, attn_drop=0., proj_drop=0.):
+    def __init__(self, dim, num_heads=4,patch=4, qkv_bias=False, attn_drop=0., proj_drop=0.):
         super().__init__()
         self.num_heads = num_heads
         self.head_dim = dim // num_heads
         assert self.head_dim * num_heads == dim, "dim must be divisible by num_heads"
 
+        self.patch = patch
         self.qkv = nn.Linear(dim, dim * 3, bias=qkv_bias)
         self.attn_drop = nn.Dropout(attn_drop) if attn_drop > 0. else nn.Identity()
         self.proj = nn.Linear(dim, dim)
@@ -22,22 +23,29 @@ class GroupAttention(nn.Module):
 
     def forward(self, x):
         BN, C, D = x.shape
-        x_reshaped = x.permute(1, 0, 2)  # [C, BN, D]
+        B = BN // self.patch 
+        N = self.patch       
 
-        # [C, BN, D] → [C, BN, 3*D]
-        qkv = self.qkv(x_reshaped)  # [C, BN, 3*D]
-        qkv = qkv.reshape(C, BN, 3, self.num_heads, self.head_dim).permute(2, 0, 3, 1, 4)
-        q, k, v = qkv[0], qkv[1], qkv[2]  # [C, num_heads, BN, head_dim]
+        x_reshaped = x.reshape(B, N, C, D).permute(0, 2, 1, 3)  # [BN,C,D]→[B,N,C,D]→[B,C,N,D]
+        
+        x_reshaped = x_reshaped.reshape(B*C, N, D)  # [B,C,N,D] → [BC, N, D]
 
-        attn_scores = (q @ k.transpose(-2, -1)) / math.sqrt(self.head_dim)
-        attn_weights = F.softmax(attn_scores, dim=-1)
+        qkv = self.qkv(x_reshaped)  # [BC, N, 3*D]
+        qkv = qkv.reshape(B*C, N, 3, self.num_heads, self.head_dim).permute(2, 0, 3, 1, 4)
+        q, k, v = qkv[0], qkv[1], qkv[2]  # [BC, num_heads, N, head_dim]
+
+        attn_scores = (q @ k.transpose(-2, -1)) / math.sqrt(self.head_dim)  # [BC, num_heads, N, N]
+        attn_weights = F.softmax(attn_scores, dim=-1)  
         attn_weights = self.attn_drop(attn_weights)
 
-        attn_out = (attn_weights @ v)  # [C, num_heads, BN, head_dim]
-        attn_out = attn_out.transpose(1, 2).reshape(C, BN, D)
-        proj_out = self.proj(attn_out)  # [C, BN, D]
+        attn_out = (attn_weights @ v)
+        attn_out = attn_out.transpose(1, 2).reshape(B*C, N, D)
+
+        proj_out = self.proj(attn_out)  # [BC, N, D]
         proj_out = self.proj_drop(proj_out)
-        out = proj_out.permute(1, 0, 2)  # [BN, C, D]
+
+        proj_out = proj_out.reshape(B, C, N, D).permute(0, 2, 1, 3)  # [BC,N,D]→[B,C,N,D]→[B,N,C,D]
+        out = proj_out.reshape(B*N, C, D)  # [B,N,C,D]→[BN, C, D]
 
         return out
 
