@@ -57,7 +57,7 @@ python run_pretraining.py
 
 ## Downstream Tasks
 
-To perform downstream tasks, first navigate to the **Datasets/Downstream** folder and process the downstream task data in accordance with the instructions in the [readme](Datasets\downstream\readme.md)(Datasets\downstream\readme.md) file.
+To perform downstream tasks, first navigate to the **Datasets/Downstream** folder and process the downstream task data in accordance with the instructions in the [readme](Datasets/downstream/readme.md) file.
 configure the python scripts in the `Downstream` folder and run this command:
 
 ```bash
