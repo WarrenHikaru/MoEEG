@@ -43,7 +43,7 @@ variant = "D"
 
 MODELS_CONFIGS = {
     "base": {
-        "embed_dim": 64, "embed_num": 4, "depth": [8, 8, 8], "num_heads": 4},
+        "embed_dim": 128, "embed_num": 4, "depth": [8, 8, 8], "num_heads": 4},
     "large": {
         "embed_dim": 512, "embed_num": 4, "depth": [8, 8, 8], "num_heads": 8},
 
