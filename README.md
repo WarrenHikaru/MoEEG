@@ -30,7 +30,7 @@ cd Datasets/pretrain
 ```
 Note: If the script encounters an error when running, you can try running it again.
 
-
+In the pre-training phase, the input signals are standardized into EEG signals of size [58, 1024] to formalize the pre-training process. For downstream tasks, the original number of channels of the signals is retained.
 
 ## Pretrained Models
 
