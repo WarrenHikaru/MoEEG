@@ -44,10 +44,11 @@ class MLP(nn.Module):
 
 class Block(nn.Module):
     def __init__(self, dim, num_heads, mlp_ratio=4., qkv_bias=False, drop=0., attn_drop=0.,
-                 drop_path=0., act_layer=nn.GELU, norm_layer=nn.LayerNorm, use_rope=False,
+                 drop_path=0.,patch=4, act_layer=nn.GELU, norm_layer=nn.LayerNorm, use_rope=False,
                  return_attention=False, is_group_attn=False,use_gate=True):
         super().__init__()
 
+        self.patch=patch
         self.is_group_attn = is_group_attn
         self.return_attention = return_attention
         self.use_gate = use_gate
@@ -61,7 +62,7 @@ class Block(nn.Module):
         if self.is_group_attn:
             self.norm2 = norm_layer(dim, eps=1e-5)
             self.group_attn = GroupAttention(
-                dim=dim, num_heads=num_heads, qkv_bias=qkv_bias, attn_drop=attn_drop, proj_drop=drop
+                dim=dim, num_heads=num_heads,patch=self.patch, qkv_bias=qkv_bias, attn_drop=attn_drop, proj_drop=drop
                 )
 
         self.norm3 = norm_layer(dim, eps=1e-5)
@@ -83,8 +84,6 @@ class Block(nn.Module):
         return x
 
 class MoEBlock(nn.Module):
-    """用MoE替换原MLP的Transformer块"""
-
     def __init__(self, dim, num_heads, mlp_ratio=4., qkv_bias=False, drop=0., attn_drop=0.,
                  drop_path=0.,top_k=2, norm_layer=nn.LayerNorm, is_causal=False, use_rope=False,
                  return_attention=False):
