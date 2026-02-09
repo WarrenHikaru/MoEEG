@@ -366,7 +366,7 @@ class EEGTransformer(nn.Module):
                 self.blocks.append(
                     Block(
                         dim=embed_dim, num_heads=num_heads, mlp_ratio=mlp_ratio,
-                        qkv_bias=qkv_bias, drop=drop_rate, attn_drop=attn_drop_rate,
+                        qkv_bias=qkv_bias,patch=self.num_patches[1], drop=drop_rate, attn_drop=attn_drop_rate,
                         drop_path=dpr[i], norm_layer=norm_layer,is_group_attn=True,
                         use_gate=True
                     )
@@ -452,7 +452,7 @@ class EEGTransformer(nn.Module):
         # mask_x.shape mN, mC
         # mask_t.shape mN
         total_aux_loss = 0.0
-        weight_aux_loss = 0.03
+        weight_aux_loss = 0.02
 
         time_patch = self.patch_embed(x)  # [B, N, C, D]
         B, N, C, D = time_patch.shape
@@ -483,7 +483,6 @@ class EEGTransformer(nn.Module):
         summary_token = self.summary_token.repeat((x.shape[0], 1, 1))
         x = torch.cat([x, summary_token], dim=1)  # BmN, mC+embed_num, D
 
-        # Transformer块前向传播
         for i, blk in enumerate(self.blocks):
             if isinstance(blk, MoEBlock):
                 x, aux_loss = blk(x)
