@@ -9,13 +9,13 @@ class GroupAttention(nn.Module):
     """
     GroupAttention
     """
-    def __init__(self, dim, num_heads=4,patch=4, qkv_bias=False, attn_drop=0., proj_drop=0.):
+    def __init__(self, dim, num_heads=4,num_patches=4, qkv_bias=False, attn_drop=0., proj_drop=0.):
         super().__init__()
         self.num_heads = num_heads
         self.head_dim = dim // num_heads
         assert self.head_dim * num_heads == dim, "dim must be divisible by num_heads"
 
-        self.patch = patch
+        self.num_patches = num_patches
         self.qkv = nn.Linear(dim, dim * 3, bias=qkv_bias)
         self.attn_drop = nn.Dropout(attn_drop) if attn_drop > 0. else nn.Identity()
         self.proj = nn.Linear(dim, dim)
@@ -23,8 +23,8 @@ class GroupAttention(nn.Module):
 
     def forward(self, x):
         BN, C, D = x.shape
-        B = BN // self.patch 
-        N = self.patch       
+        B = int(BN // self.num_patches)
+        N = int(self.num_patches)
 
         x_reshaped = x.reshape(B, N, C, D).permute(0, 2, 1, 3)  # [BN,C,D]→[B,N,C,D]→[B,C,N,D]
         

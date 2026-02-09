@@ -33,14 +33,12 @@ valid_dataset = torchvision.datasets.DatasetFolder(
     root="..\\Datasets\\datasets_pretraining\\merged\\ValidFolder\\",
     loader=load_fn, extensions=['.edf'])
 
-train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, num_workers=0, shuffle=True)
-valid_loader = torch.utils.data.DataLoader(valid_dataset, batch_size=batch_size, num_workers=0, shuffle=False)
+train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, num_workers=8, shuffle=True,persistent_workers=True,drop_last=True)
+valid_loader = torch.utils.data.DataLoader(valid_dataset, batch_size=batch_size, num_workers=2, shuffle=False,persistent_workers=True,drop_last=True)
 
 steps_per_epoch = math.ceil(len(train_loader) / len(devices))
 
 tag = "base"
-variant = "D"
-
 MODELS_CONFIGS = {
     "base": {
         "embed_dim": 64, "embed_num": 4, "depth": [8, 8, 8], "num_heads": 4},
