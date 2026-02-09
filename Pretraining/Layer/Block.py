@@ -44,7 +44,7 @@ class MLP(nn.Module):
 
 class Block(nn.Module):
     def __init__(self, dim, num_heads, mlp_ratio=4., qkv_bias=False, drop=0., attn_drop=0.,
-                 drop_path=0., act_layer=nn.GELU, norm_layer=nn.LayerNorm, use_rope=False,
+                 drop_path=0.,patch=4, act_layer=nn.GELU, norm_layer=nn.LayerNorm, use_rope=False,
                  return_attention=False, is_group_attn=False,use_gate=True):
         super().__init__()
 
