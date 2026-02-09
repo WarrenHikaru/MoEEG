@@ -48,7 +48,7 @@ class LitEEGPTCausal(pl.LightningModule):
     def __init__(self, load_path="../../checkpoint/MoEEG_large.ckpt"):
         super().__init__()
         self.chans_num = 19
-        self.embed_dim = 512        # Large=512 ; Base=64
+        self.embed_dim = 512        # Large=512 ; Base=128
         self.num_heads = 8          # Large=8 ; Base=4
 
         target_encoder = EEGTransformer(
