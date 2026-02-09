@@ -48,6 +48,7 @@ class Block(nn.Module):
                  return_attention=False, is_group_attn=False,use_gate=True):
         super().__init__()
 
+        self.patch=patch
         self.is_group_attn = is_group_attn
         self.return_attention = return_attention
         self.use_gate = use_gate
@@ -61,7 +62,7 @@ class Block(nn.Module):
         if self.is_group_attn:
             self.norm2 = norm_layer(dim, eps=1e-5)
             self.group_attn = GroupAttention(
-                dim=dim, num_heads=num_heads, qkv_bias=qkv_bias, attn_drop=attn_drop, proj_drop=drop
+                dim=dim, num_heads=num_heads,patch=self.patch, qkv_bias=qkv_bias, attn_drop=attn_drop, proj_drop=drop
                 )
 
         self.norm3 = norm_layer(dim, eps=1e-5)
