@@ -1,6 +1,4 @@
-**MoEEG: A Sparse Mixture-of-Experts Transformer for Universal EEG**
-
-**Representation Learning**
+**MoEEG: A Sparse Mixture-of-Experts Transformer for Universal EEG Representation Learning**
 
 This repository is the official implementation of **MoEEG: A Sparse Mixture-of-Experts Transformer for Universal EEG**
 
