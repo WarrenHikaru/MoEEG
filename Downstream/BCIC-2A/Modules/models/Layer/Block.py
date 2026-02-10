@@ -1,5 +1,5 @@
 import torch.nn as nn
-from utils import *
+from .utils import *
 from .MoE import MoE
 from .AttentionLayer import Attention,GroupAttention
 
