@@ -4,7 +4,7 @@
 
 For open-source datasets, you can use the official [code of the open-source datasets](prepare_pretrain_dataset.py) to process the pre-trained data. 
 
-For the Cue-reactivity dataset, as it has not yet been made open-source by our laboratory, you may refer to the processing [code for the Cue dataset](prepare_cue_dataset) to perform similar processing on other datasets.
+For the Cue-reactivity dataset, as it has not yet been made open-source by our laboratory, you may refer to the processing [code for the Cue dataset](prepare_cue_dataset.py) to perform similar processing on other datasets.
 
 ### PhysioNetMI
 
