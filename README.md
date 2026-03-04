@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 ## Datasets
 
-Follow the instructions in the [datasets/pretrain/readme.md](datasets/pretrain/readme.md) to download the pre-training EEG dataset.
+Follow the instructions in the [datasets/pretrain/readme.md](Datasets/pretrain/readme.md) to download the pre-training EEG dataset.
 
 ```bash
 cd Datasets/pretrain
