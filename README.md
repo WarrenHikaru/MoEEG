@@ -1,4 +1,5 @@
-2026/4/8 Updata
+2026/4/8 Updata:
+
 Our work has been accepted as a full poster paper at CogSci 2026 and will be presented upon formal publication.
 
 ----------------------------------------------------------------------------------------------------------------
