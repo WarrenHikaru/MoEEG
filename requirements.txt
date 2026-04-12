@@ -3,7 +3,7 @@
 # https://hf-mirror.com/madbuda/triton-windows-builds
 # Install torch from official website using command:
 # pip3 install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu126
-# Microsoft C++ Build Tools is required.
+# Microsoft C++ Build Tools is required:
 # In Build Tools, install "Desktop development with C++" with default options.
 # python 3.10.18
 
