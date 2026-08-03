@@ -1,5 +1,6 @@
 2026/8/3 Updata:
 https://escholarship.org/uc/item/7wd8s47n
+PDF - [MoEEG](Figure/MoEEG - A Sparse Mixture-of-Experts Transformer for Universal EEG Representation Learning.pdf) 
 
 ----------------------------------------------------------------------------------------------------------------
 2026/4/8 Updata:
