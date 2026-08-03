@@ -1,8 +1,10 @@
 2026/8/3 Updata:
 https://escholarship.org/uc/item/7wd8s47n
+
 ----------------------------------------------------------------------------------------------------------------
 2026/4/8 Updata:
 Our work has been accepted as a full paper at CogSci 2026 and will be presented upon proceedings publication.
+
 ----------------------------------------------------------------------------------------------------------------
 
 **MoEEG: A Sparse Mixture-of-Experts Transformer for Universal EEG Representation Learning**
